@@ -13,9 +13,10 @@ if not any(c.isdigit() for c in password):
 if not any(c in "*-#" for c in password):
     errors.append("no one special symbols")
 if not all(c in allowed_chars for c in password):
-    errors.append("special symbols *-#")
+    errors.append("contains invalid characters"")
 if not errors:
     print("good password")
 else:
     for error in errors:
         print(error)
+
